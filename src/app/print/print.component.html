@@ -1,0 +1,12 @@
+<div>
+  <div id="printableWindow">
+    <div *ngFor="let gift of quiz.gifts">
+      {{ gift.name }}: {{ gift.band }}
+    </div>
+  </div>
+  <button
+    class="btn btn-primary btn-lg"
+    (click)="printDiv('printableWindow')">
+    Print
+  </button>
+</div>
