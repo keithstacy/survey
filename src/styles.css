@@ -1,1 +1,230 @@
-/* You can add global styles to this file, and also import other style files */
+#printableWindow {
+  font-family: sans-serif;
+}
+.badge {
+  margin-bottom:1em;
+}
+.badge-flex {
+  font-size:10px;
+}
+.btn {
+  border-radius: 0;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.flex-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+.flex-item {
+  align-self:flex-start;
+  width:10vw;
+}
+.footnote {
+  font-size:2.5mm;
+  color:darkslategray;
+}
+.grid-container {
+  display:inline-grid;
+  grid-template-columns: 25px 400px;
+  grid-template-rows: 1vw;
+}
+.grid-item-input {
+  grid-column: 1;
+  grid-row: 1;
+  margin-top: 10%;
+}
+.grid-item-label {
+  grid-column: 2;
+  grid-row: 1;
+  margin-top: 2%;
+  height: 9vw;
+}
+h3,.h3 {
+  position:absolute;
+  bottom:0;
+}
+.image{
+  height:80em;
+  background-size:cover;
+  width:100vw;
+  background-image:url('./p66joh73.png');
+  overflow:hidden;
+  background-position: -160px,0;
+}
+.option {
+  background-color:#cadaee;
+  font-size: 4vw;
+  width: 70vw;
+  height: 9vw;
+  margin: 4px;
+}
+.options-input {
+  height:7vw;
+  width:7vw;
+}
+.question {
+  width: 89vw;
+}
+.question-container {
+  margin-top:2em;
+  height:3em;
+  position:relative;
+}
+.question-size {
+  font-size: 3.25vw;
+}
+.result-question{
+  background-color:#eee;
+  margin:4px;
+  padding:6px;
+}
+/* Smallest formats */
+@media only screen and (max-width: 400px) {
+  h1,.h1{
+    font-size:22px;
+  }
+  h2,.h2{
+    font-size:20px;
+  }
+  h3,.h3{
+    font-size:4.5vw;
+  }
+  .badge {
+    visibility: hidden;
+    height:0;
+    margin-bottom:0;
+  }
+  .image{
+    background-image:url('./p66joh73.narrow.png');
+    background-position:160vw,0;
+    overflow:hidden;
+    /* max-height:600px; */
+  }
+  .options-input {
+    height:8vw;
+    width:8vw;
+  }
+  .question-container {
+    margin-top: 1mm;
+  }
+}
+/* Tablets */
+@media only screen and (min-width: 401px) and (max-width: 500px) {
+  h1,.h1{
+    font-size:2px;
+  }
+  h2,.h2{
+    font-size:20px;
+  }
+  h3,.h3{
+    font-size:4vw;
+  }
+  .image{
+    background-image:url('./p66joh73.narrow.png');
+    background-position:160vw,0;
+    overflow:hidden;
+  }
+  .option {
+    font-size: 4vw;
+    height:9vw;
+    margin:5px;
+  }
+  .badge {
+    visibility: hidden;
+  }
+  .question {
+    width:100%;
+  }
+  .question-container {
+    width:75vw;
+  }
+  .options-input {
+    height:6vw;
+    width:6vw;
+  }
+}
+/* Midsize screens */
+@media only screen and (min-width: 501px) and (max-width: 600px) {
+  h1,.h1{
+    font-size:2px;
+  }
+  h2,.h2{
+    font-size:20px;
+  }
+  h3,.h3{
+    font-size:3.5vw;
+  }
+  .option {
+    font-size: 2.6vw;
+    height: 9.5vw;
+    width: 35vw;
+  }
+  .flex-container {
+    flex-flow: row wrap;
+    }
+    .question-container {
+      margin-top: 1cm;
+    }
+    .options-input {
+    height:5vw;
+    width:5vw;
+  }
+  .question {
+      width:80vw;
+      font-size-adjust: 0.45;
+      background-color:red;
+  }
+  .grid-container {
+    grid-template-rows: 2vw;
+    grid-template-columns: 25px 300px;
+  }
+  .grid-item-label {
+    width: 30vw;
+  }
+}
+/* Largest formats */
+@media only screen and (min-width: 601px) {
+  .flex-container {
+    flex-flow: row wrap;
+    width:500px;
+  }
+  h1,.h1{
+    font-size:20px;
+  }
+  h2,.h2{
+    font-size:20px;
+  }
+  h3,.h3{
+    font-size:20px;
+  }
+  .question {
+    width: 500px;
+    font-size-adjust:0.45;
+  }
+  .option {
+    font-size: 100%;
+    height: 50px;
+    width: 5cm;
+    /* background-color:plum; */
+  }
+  .options-input {
+    height:30px;
+    width:30px;
+  }
+  .grid-container {
+    grid-template-rows: 35px;
+    grid-template-columns: 32px 45px;
+    width: 6cm;
+    /* background-color:red; */
+  }
+  .grid-item-label {
+    width: 12em;
+    height: 48px;
+    /* background-color:chartreuse; */
+  }
+}

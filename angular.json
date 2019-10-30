@@ -21,9 +21,11 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
+              "src/data",
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.css"
             ],
             "scripts": []
