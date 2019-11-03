@@ -87,6 +87,7 @@ export class QuizComponent implements OnInit {
     // tslint:disable-next-line: prefer-const
     let answers = [];
     this.quiz.questions.forEach(x => answers.push({
+      // tslint:disable-next-line: object-literal-key-quotes
       'quizId': this.quiz.id, 'questionId': x.id, 'answered': x.answered
     }));
     this.quizService.post(this.quiz);
