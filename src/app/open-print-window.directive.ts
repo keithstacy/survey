@@ -2,17 +2,19 @@ import { Directive, HostListener } from '@angular/core';
 import { PrintComponent } from './print/print.component';
 
 @Directive({
-  selector: '[appOpenPrintWindow]'
+  selector: '[appOpenPrintWindow]',
+  providers: [PrintComponent]
 })
 export class OpenPrintWindowDirective {
 
-  constructor(private printer: PrintComponent) { }
-
-  numberOfClicks = 0;
+  constructor(private printComponent: PrintComponent) { }
 
   @HostListener('click', ['$event.target']) onClick(button) {
-    console.log('print button', button, 'number of clicks', this.numberOfClicks++);
-    // this.printer.printQuiz();
+    this.printQuiz();
+  }
+
+  printQuiz(): void {
+    this.printComponent.printQuiz();
   }
 
 }
