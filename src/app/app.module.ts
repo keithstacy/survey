@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { PrintComponent } from './print/print.component';
 import { OpenPrintWindowDirective } from './open-print-window.directive';
+import { QuizService } from './services/quiz.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,10 @@ import { OpenPrintWindowDirective } from './open-print-window.directive';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    QuizComponent,
+    QuizService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
