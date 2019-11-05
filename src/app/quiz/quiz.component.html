@@ -90,7 +90,9 @@
         {{ gift.name }}: {{ gift.band }}
         </div>
       </div>
-      <button class="btn btn-primary btn-lg" (click)="printDiv('printableWindow')">Print</button>
+      <div>
+        <button appOpenPrintWindow [quiz]=quiz class="btn btn-primary btn-md">Print</button>
+      </div>
       <hr />
       <div>
         <strong

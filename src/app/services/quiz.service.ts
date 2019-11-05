@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Quiz, Question, Gift } from '../models';
-// import { Score, GiftScore } from '../models/score';
 
 @Injectable()
 export class QuizService {
@@ -82,4 +81,9 @@ export class QuizService {
       { id: 'data/spiritualGifts.prod.json', name: 'Spiritual Gifts' }
     ];
   }
+
+  get Quiz() {
+    return this._quiz;
+  }
+
 }

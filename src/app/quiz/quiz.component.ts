@@ -1,3 +1,5 @@
+// tslint:disable: prefer-const
+// tslint:disable: object-literal-key-quotes
 import { Component, OnInit } from '@angular/core';
 import { QuizService } from '../services/quiz.service';
 import { Option, Question, Quiz, QuizConfig, Gift } from '../models/index';
@@ -45,7 +47,6 @@ export class QuizComponent implements OnInit {
   }
 
   loadQuiz(quizName: string) {
-  // tslint:disable-next-line: prefer-const
     let obj = this.quizService.get(quizName).subscribe(res => {
       this.quiz = new Quiz(res);
       this.pager.count = this.quiz.questions.length;
@@ -84,7 +85,6 @@ export class QuizComponent implements OnInit {
   }
 
   onSubmit() {
-    // tslint:disable-next-line: prefer-const
     let answers = [];
     this.quiz.questions.forEach(x => answers.push({
       'quizId': this.quiz.id, 'questionId': x.id, 'answered': x.answered
@@ -92,16 +92,6 @@ export class QuizComponent implements OnInit {
     this.quizService.post(this.quiz);
     this.quizScore = this.quizService.getScore();
     this.mode = 'result';
-  }
-
-  printDiv(elementId: any) {
-    const printableWindow = window.open('', '_blank', 'Print content');
-    const divToPrint = document.getElementById(elementId);
-    printableWindow.document.write(divToPrint.outerHTML);
-    printableWindow.document.close();
-    printableWindow.focus();
-    printableWindow.print();
-    printableWindow.close();
   }
 
 }
